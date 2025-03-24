@@ -53,6 +53,9 @@ npm run dist
 - `dist/Projetos App Setup 1.0.0.exe` → Instalador do app
 - `dist/win-unpacked/` → Versão portátil que roda direto
 
+
+4. Colocar o arquivo .env na pasta do programa.
+
 ---
 
 ## Pré-requisitos
