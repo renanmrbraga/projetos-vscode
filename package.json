@@ -1,0 +1,50 @@
+{
+    "name": "projetos-app",
+    "version": "1.0.0",
+    "description": "Aplicativo para abrir projetos locais com interface leve e bonita usando Electron + React",
+    "main": "main.js",
+    "author": "Renan Braga",
+    "license": "MIT",
+    "scripts": {
+      "dev": "concurrently \"vite\" \"node wait-on.js\"",
+      "build": "vite build",
+      "start": "electron .",
+      "dist": "npm run build && electron-builder"
+    },
+    "keywords": [],
+    "dependencies": {
+      "dotenv": "^16.4.7",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "electron": "^27.1.1",
+      "@vitejs/plugin-react": "^4.3.4",
+      "concurrently": "^8.2.0",
+      "electron-builder": "^25.1.8",
+      "vite": "^5.0.0",
+      "wait-on": "^8.0.3"
+    },
+    "build": {
+      "appId": "com.renan.projetosapp",
+      "productName": "Projetos App",
+      "directories": {
+        "buildResources": "build"
+      },
+      "files": [
+        "dist/**/*",
+        "main.js",
+        "preload.js",
+        "package.json",
+        ".env"
+      ],
+      "extraMetadata": {
+        "main": "main.js"
+      },
+      "win": {
+        "target": "nsis",
+        "icon": "build/icon.ico"
+      }
+    }
+  }
+  
