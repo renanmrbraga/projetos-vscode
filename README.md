@@ -1,47 +1,93 @@
 
 # Projetos App
 
-Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode de forma rápida.
+Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode com interface futurista (Electron + React + Vite).
 
 ---
 
-## Instalação
+## Como rodar em modo desenvolvimento
 
-1. Baixe e execute o instalador: `Projetos App Setup 1.0.0.exe`
-2. Siga os passos na tela
-3. O app será instalado com atalho no menu iniciar
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/renanmrbraga/projetos-vscode.git
+cd projetos-vscode
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Crie o arquivo `.env` na raiz com o caminho dos seus projetos:
+
+```env
+PROJETOS_PATH=C:\Users\SeuUsuario\Projetos
+```
+
+4. Inicie o app:
+
+```bash
+npm run dev
+```
+
+---
+
+## Como gerar o instalador `.exe` (modo produção)
+
+1. Gere o build da interface:
+
+```bash
+npm run build
+```
+
+2. Empacote o aplicativo:
+
+```bash
+npm run dist
+```
+
+3. Após o processo, você terá:
+
+- `dist/Projetos App Setup 1.0.0.exe` → Instalador do app
+- `dist/win-unpacked/` → Versão portátil que roda direto
 
 ---
 
 ## Pré-requisitos
 
-- Visual Studio Code instalado (e acessível pelo terminal com `code`)
-- Um arquivo `.env` com o caminho da sua pasta de projetos
+- [Node.js](https://nodejs.org) instalado
+- Visual Studio Code instalado e acessível no terminal (`code`)
+- Git instalado (para clonar o repositório)
+- Windows 10/11 com suporte a execução de aplicativos locais
 
 ---
 
-## Configuração `.env`
+## Estrutura esperada
 
-Crie um arquivo `.env` no mesmo diretório do executável com:
-
-```env
-PROJETOS_PATH=C:\caminho\para\sua\pasta\Projetos
+```
+projetos-vscode/
+├── build/                # Ícone do app (icon.ico)
+├── dist/                 # Gerado após build
+├── node_modules/         # Dependências
+├── src/                  # Código React
+├── main.js               # Entrada principal do Electron
+├── preload.js            # Comunicação segura
+├── vite.config.js        # Configuração do Vite
+├── .env                  # Caminho dos projetos
+├── package.json
 ```
 
 ---
 
-## Como Usar
+## Recursos
 
-1. Abra o Projetos App
-2. O app lista as pastas dentro do diretório configurado
-3. Clique em qualquer botão para abrir o projeto direto no VSCode
-
----
-
-## Autor
-
-**Renan Braga**  
-[GitHub](https://github.com/renanmrbraga) • [LinkedIn](https://www.linkedin.com/in/renanmrbraga)
+- Interface dark moderna
+- Listagem automática de projetos
+- Abertura direta no VSCode
+- Compatível com Windows (instalador ou portátil)
+- Suporte a `.env` com caminho dinâmico
 
 ---
 
