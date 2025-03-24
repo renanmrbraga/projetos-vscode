@@ -5,7 +5,7 @@ Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode com in
 
 ---
 
-## 🚀 Instalação
+## Instalação
 
 1. Baixe e execute o instalador: `Projetos App Setup 1.0.0.exe`
 2. Siga os passos na tela
@@ -13,14 +13,14 @@ Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode com in
 
 ---
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 - Visual Studio Code instalado (e acessível pelo terminal com `code`)
 - Um arquivo `.env` com o caminho da sua pasta de projetos
 
 ---
 
-## 🛠️ Configuração `.env`
+## Configuração `.env`
 
 Crie um arquivo `.env` no mesmo diretório do executável com:
 
@@ -30,7 +30,7 @@ PROJETOS_PATH=C:\caminho\para\sua\pasta\Projetos
 
 ---
 
-## 🧭 Como Usar
+## Como Usar
 
 1. Abra o Projetos App
 2. O app lista as pastas dentro do diretório configurado
@@ -38,7 +38,7 @@ PROJETOS_PATH=C:\caminho\para\sua\pasta\Projetos
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Renan Braga**  
 [GitHub](https://github.com/renanmrbraga) • [LinkedIn](https://www.linkedin.com/in/renanmrbraga)
