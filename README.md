@@ -1,7 +1,7 @@
 
 # Projetos App
 
-Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode com interface futurista (Electron + React + Vite).
+Aplicativo de desktop leve e moderno para abrir projetos locais no VSCode de forma rápida.
 
 ---
 
